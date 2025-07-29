@@ -14,7 +14,6 @@ A lightweight and helpful Chrome extension for **Grow a Garden** players. Stay u
   
   ```
   "Master Sprinkler", "Level Up Lollipop", "Medium Toy", "Medium Treat", 
-  "Common Egg", "Tomato", "Carrot", "Basic Sprinkler", "Trowel",
   "Elder Strawberry", "Burning Bud", "Sugar Apple", "Giant Pinecone", 
   "Beanstalk", "Ember Lily", "Paradise Egg", "Mythical Egg", "Bug Egg"
   ```
