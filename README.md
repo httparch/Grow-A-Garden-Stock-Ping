@@ -28,12 +28,13 @@ A lightweight and helpful Chrome extension for **Grow a Garden** players. Stay u
 
 ## 🔗 API Endpoints Used
 
-- `https://api.joshlei.com/v2/growagarden/info/`  
+- [`https://api.joshlei.com/v2/growagarden/info/`](https://api.joshlei.com/v2/growagarden/info/)  
   Used for fetching:
   - Wiki search results
   - Current weather conditions
-  - Available in-game stocks
 
+- [`https://github.com/Liriosha/GAGAPI`](https://github.com/Liriosha/GAGAPI)  
+  - Available in-game stocks
 ---
 
 ## ⚠️ Version 1 Limitations
