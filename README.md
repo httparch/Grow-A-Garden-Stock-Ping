@@ -53,21 +53,6 @@ A lightweight and helpful Chrome extension for **Grow a Garden** players. Stay u
 
 ---
 
-## 🛠️ Development Notes
-
-- Written in vanilla JavaScript.
-- Uses `setInterval()` polling to check stocks and fire notifications.
-- Notification logic is customizable via a list of watchlisted items.
-- More features (e.g., filters, UI themes, cosmetic tracking) coming soon!
-
----
-
-## 💡 Contributing
-
-Have suggestions or want to help improve the extension?  
-Feel free to fork this repo and open a pull request!
-
----
 
 ## 📄 License
 
