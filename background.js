@@ -9,7 +9,7 @@ const CATEGORY_MAP = {
   eggs: { items: 'eggs', folder: 'egg' },
 };
 
-const itemsToNotify = ["Master Sprinkler", "Level Up Lollipop", "Medium Toy", "Medium Treat",
+const itemsToNotify = ["Master Sprinkler", "Level Up Lollipop", "Medium Toy", "Medium Treat","Godly Sprinkler",
                         "Elder Strawberry", "Burning Bud", "Sugar Apple", "Giant Pinecone", "Beanstalk", "Ember Lily",
                         "Paradise Egg", "Mythical Egg", "Bug Egg"];
 
@@ -35,13 +35,13 @@ async function notifyItemRestock(category) {
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.alarms.create("checkEggAlarm", {
-    delayInMinutes: getDelayUntilNextMultipleOf(30), 
-    periodInMinutes: 30,
+    delayInMinutes: getDelayUntilNextMultipleOf(30) + 0.5, 
+    periodInMinutes: 25,
   });
 
   chrome.alarms.create("checkFastAlarm", {
-    delayInMinutes: getDelayUntilNextMultipleOf(5), 
-    periodInMinutes: 5,
+    delayInMinutes: getDelayUntilNextMultipleOf(5) + 0.5, 
+    periodInMinutes: 3,
   });
 });
 
