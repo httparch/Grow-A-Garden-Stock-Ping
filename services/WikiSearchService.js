@@ -14,13 +14,30 @@ export class GaGWiki {
   }
 
   async init() {
-    this.data = await getGaGInfo();
-    if (!this.data || !Array.isArray(this.data)) {
-      console.error("Invalid data received from API");
-      return;
+    try{
+        this.data = await getGaGInfo();
+        if (!this.data || !Array.isArray(this.data)) {
+          throw new Error("Invalid data format received");
+        }
+
+        this.searchInput.addEventListener('input', () => this.handleSearch());
+    }catch (error) {
+      console.error("Failed to fetch GaG Info:", error);
+      this.displayUnavailable();
     }
 
-    this.searchInput.addEventListener('input', () => this.handleSearch());
+  }
+
+  displayUnavailable() {
+      this.searchInput.disabled = true;
+      this.searchInput.placeholder = "Wiki is currently offline";
+      this.infoSection.style.display = "block";
+      this.displayName.textContent = "Wiki Not Available";
+      this.rarityInfo.textContent = "-";
+      this.description.textContent = "Sorry! The Wiki is currently not available. Please try again later.";
+      this.icon.src = "images/icons/default.png";
+      this.typeInfo.textContent = "-";
+      this.priceInfo.textContent = "-";
   }
 
   handleSearch() {
