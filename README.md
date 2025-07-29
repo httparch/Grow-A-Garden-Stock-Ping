@@ -39,7 +39,7 @@ A lightweight and helpful Chrome extension for **Grow a Garden** players. Stay u
 
 ## ⚠️ Version 1 Limitations
 
-- 🔒 **Cosmetics and event-specific items are not yet supported** for stock alerts or search.
+- 🔒 **Cosmetics and event-specific items are not yet supported** for stock alerts.
 - 🧪 Feature improvements and UI enhancements are in progress for future versions.
 
 ---
