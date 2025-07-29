@@ -6,10 +6,10 @@ A lightweight and helpful Chrome extension for **Grow a Garden** players. Stay u
 
 ## 🔍 Features
 
-- **Current Stocks Viewer**  
+- **Current Shop Stocks**  
   View the list of currently available in-game items via the Grow a Garden API.
 
-- **Smart Notifications**  
+- **Ring Notifications**  
   Get real-time notifications when **specific rare or valuable items** are in stock, including:
   
   ```
@@ -18,10 +18,10 @@ A lightweight and helpful Chrome extension for **Grow a Garden** players. Stay u
   "Beanstalk", "Ember Lily", "Paradise Egg", "Mythical Egg", "Bug Egg"
   ```
 
-- **Grow a Garden Wiki Search**  
+- **Grow a Garden Info Search**  
   Easily search for items and info from the Grow a Garden wiki, powered by the official API.
 
-- **Weather Integration**  
+- **Current Weather**  
   View the current in-game weather at a glance.
 
 ---
