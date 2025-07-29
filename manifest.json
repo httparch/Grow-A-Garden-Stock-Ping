@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Grow A Garden Extension",
+    "version": "1.0",
+    "description": "Grow A Garden Extension",
+    "icons":{
+        "128": "./images/icons/GaGextension128.png",
+        "48":"./images/icons/GaGextension48.png",
+        "16":"./images/icons/GaGextension16.png"
+    },
+    "permissions": ["notifications", "alarms", "storage"],
+    "action":{
+        "default_icon": "./images/icons/GaGextension16.png",
+        "default_popup": "popup.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["images/**/*.png"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js",
+         "type": "module"
+    }
+}

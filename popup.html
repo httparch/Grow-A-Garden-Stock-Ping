@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styling/style.css">
+    <link rel="stylesheet" href="./styling/style2.css">
+    <link rel="stylesheet" href="./styling/font.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script type="module" src="popup.js" defer></script>
+</head>
+<body>
+    <div id="main-container">
+        <button id="toggleBtn"></button>
+        
+        <div id="page1">
+            <div id="top-left-icon">
+                <img src="images/icons/GaGextension16.png" class="wiki-icon" />
+                <h2 class="bungee-regular">GaG ext.</h2>
+             </div>
+            <div id="weatherContainer">
+                <ul id="weatherList"></ul>
+            </div>
+            <div class="container">
+                <div class="sub-container">
+                    <h3 class="bungee-regular">Eggs</h3>
+                    <ul id="eggList"></ul>
+                </div>
+                <div class="sub-container">
+                    <h3 class="bungee-regular">Seeds</h3>
+                    <ul id="seedList"></ul>
+                </div>
+                <div class="sub-container">
+                    <h3 class="bungee-regular">Gears</h3>
+                    <ul id="gearList"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="page2" style="display: none;">
+             <div class="page2-container">
+                <div class="wiki-header">
+                    <img src="images/icons/GaGextension16.png" class="wiki-icon" />
+                    <h2 class="bungee-regular">GaG Wiki</h2>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="searchbar" placeholder="Enter item name...">
+            </div>
+
+                <div class="info-sec" id="infoSec" style="display: none;">
+                    <img src="" alt="" id="icon" />
+                    <h3 id="display_name" class="bungee-regular">Name</h3>
+                    <div class="label-row"><span class="label">Type:</span><span id="type_info" class="text_data"></span></div>
+                    <div class="label-row"><span class="label">Tier:</span><span id="rarity_info" class="text_data"></span></div>
+                    <div class="label-row"><span class="label">Cost:</span><span id="price_info" class="text_data"></span></div>
+                    <div class="label-row"><span class="label">Effects:</span><span id="description" class="text_data"></span></div>
+                </div>
+                
+        </div>
+
+        </div>
+        <div id="version">v1.0</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+.bungee-regular {
+  font-family: "Bungee", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+#version {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  font-family: 'Bungee', cursive; 
+  font-size: 10px;
+  color: #ffffff;
+  z-index: 1000;
+  user-select: none;
+  color: rgb(255, 225, 197);
+}
+
+#top-left-icon {
+  position: fixed;
+  top: 1px;
+  left: 1px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  color: rgb(216, 255, 124);
+}
+
+#top-left-icon img.wiki-icon {
+  width: 24px; 
+  height: 24px;
+}
+
+#top-left-icon h2 {
+  margin: 0;
+  font-size: 18px;
+}
