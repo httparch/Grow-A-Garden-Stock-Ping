@@ -1,4 +1,5 @@
-# 🌱 Grow a Garden Stock Notifier - Chrome Extension
+# <img width="16" height="16" alt="GaGextension16" src="https://github.com/user-attachments/assets/2ea6143d-3d49-46bb-ae04-7bb2e99fe839" />
+ Grow a Garden Stock Notifier - Chrome Extension
 
 A lightweight and helpful Chrome extension for **Grow a Garden** players. Stay updated on in-game shop stocks, real-time weather, and searchable wiki information — all in one place, without opening the game!
 
