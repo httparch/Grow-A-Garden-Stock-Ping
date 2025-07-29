@@ -13,6 +13,7 @@ export class Notifier {
         title: this.title,
         message: message,
       });
+      console.log("Notification called");
     }
   }//end of send()
 }//end of notifier class
