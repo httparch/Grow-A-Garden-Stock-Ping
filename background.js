@@ -35,30 +35,30 @@ async function notifyItemRestock(category) {
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.alarms.create("checkEggAlarm", {
-    delayInMinutes: getDelayUntilNextMultipleOf(30) + 0.5, 
-    periodInMinutes: 25,
+    delayInMinutes: getDelayUntilNextMultipleOf(30), 
+    periodInMinutes: 30,
   });
 
   chrome.alarms.create("checkFastAlarm", {
-    delayInMinutes: getDelayUntilNextMultipleOf(5) + 0.5, 
-    periodInMinutes: 3,
+    delayInMinutes: getDelayUntilNextMultipleOf(5), 
+    periodInMinutes: 5,
   });
 });
 
 
 chrome.alarms.onAlarm.addListener((alarm) => {
-  const currentMinute = new Date().getMinutes();
 
-  if (currentMinute % 5 !== 0) {
-    console.log("Skipped notification. Not a multiple of 5.");
-    return;
+   if (alarm.name === "checkFastAlarm") {
+    setTimeout(() => {
+      notifyItemRestock("gear");
+      notifyItemRestock("seeds");
+    }, 10000); 
   }
 
   if (alarm.name === "checkEggAlarm") {
-    notifyItemRestock("eggs");
-  } else if (alarm.name === "checkFastAlarm") {
-    notifyItemRestock("gear");
-    notifyItemRestock("seeds");
+    setTimeout(() => {
+      notifyItemRestock("eggs");
+    }, 10000);
   }
 });
 
@@ -66,7 +66,7 @@ function getDelayUntilNextMultipleOf(minutes) {
   const now = new Date();
   const ms = now.getTime();
   const next = new Date(Math.ceil(ms / (minutes * 60 * 1000)) * minutes * 60 * 1000);
-  return (next - now) / 60000; // minutes
+  return (next - now) / 60000; 
 }
 
 
