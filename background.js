@@ -1,6 +1,7 @@
 import { Notifier } from "./services/NotificationService.js";
 import { getAllItem } from "./api/endpoints.js";
 
+
 const notifier = new Notifier();
 
 const CATEGORY_MAP = {
@@ -9,8 +10,8 @@ const CATEGORY_MAP = {
   eggs: { items: 'eggs', folder: 'egg' },
 };
 
-const itemsToNotify = ["Master Sprinkler", "Level Up Lollipop", "Medium Toy", "Medium Treat","Godly Sprinkler",
-                        "Elder Strawberry", "Burning Bud", "Sugar Apple", "Giant Pinecone", "Beanstalk", "Ember Lily",
+const itemsToNotify = ["Master Sprinkler", "Level Up Lollipop", "Medium Toy", "Medium Treat","Godly Sprinkler","Tanning Mirror","Friendship Pot",
+                        "Elder Strawberry", "Burning Bud", "Sugar Apple", "Giant Pinecone", "Beanstalk", "Ember Lily","Grape", "Mushroom","Pepper","Cacao",
                         "Paradise Egg", "Mythical Egg", "Bug Egg"];
 
 
@@ -60,6 +61,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
       notifyItemRestock("eggs");
     }, 10000);
   }
+
 });
 
 function getDelayUntilNextMultipleOf(minutes) {
