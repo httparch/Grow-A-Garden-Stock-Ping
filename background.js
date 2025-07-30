@@ -10,7 +10,7 @@ const CATEGORY_MAP = {
   eggs: { items: 'eggs', folder: 'egg' },
 };
 
-const itemsToNotify = ["Master Sprinkler", "Level Up Lollipop", "Medium Toy", "Medium Treat","Godly Sprinkler","Tanning Mirror","Friendship Pot",
+const itemsToNotify = ["Master Sprinkler", "Level Up Lollipop", "Medium Toy", "Medium Treat","Godly Sprinkler","Tanning Mirror","Friendship Pot", "Magnifying Glass",
                         "Elder Strawberry", "Burning Bud", "Sugar Apple", "Giant Pinecone", "Beanstalk", "Ember Lily","Grape", "Mushroom","Pepper","Cacao",
                         "Paradise Egg", "Mythical Egg", "Bug Egg"];
 
@@ -36,18 +36,20 @@ async function notifyItemRestock(category) {
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.alarms.create("checkEggAlarm", {
-    delayInMinutes: getDelayUntilNextMultipleOf(30), 
+    delayInMinutes: getDelayUntilNextMultipleOf(30,true), 
     periodInMinutes: 30,
   });
 
   chrome.alarms.create("checkFastAlarm", {
-    delayInMinutes: getDelayUntilNextMultipleOf(5), 
+    delayInMinutes: getDelayUntilNextMultipleOf(5,true), 
     periodInMinutes: 5,
   });
+
 });
 
 
 chrome.alarms.onAlarm.addListener((alarm) => {
+
 
    if (alarm.name === "checkFastAlarm") {
     setTimeout(() => {
@@ -64,7 +66,12 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 
 });
 
-function getDelayUntilNextMultipleOf(minutes) {
+
+
+function getDelayUntilNextMultipleOf(minutes, runImmediately = false) {
+
+  if (runImmediately) return 0.01;
+
   const now = new Date();
   const ms = now.getTime();
   const next = new Date(Math.ceil(ms / (minutes * 60 * 1000)) * minutes * 60 * 1000);
