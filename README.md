@@ -35,6 +35,12 @@ A lightweight and helpful Chrome extension for **Grow a Garden** players. Stay u
 - [`https://github.com/Liriosha/GAGAPI`](https://github.com/Liriosha/GAGAPI)  
   Used to fetch:
   - Current in-game shop stock
+---
+
+## ✅ [FEAT] in progresss 🚧
+
+- 🔧 Current weather notification in progress
+- 🔧 User can select which items to receive notifications for.
 
 ---
 
@@ -42,7 +48,8 @@ A lightweight and helpful Chrome extension for **Grow a Garden** players. Stay u
 
 - 🎨 **Cosmetics and event-exclusive items are not yet supported** for alerts or display.
 - 🧪 UI refinements and advanced filtering features are under development for future versions.
-
+- ⚠️ Current weather notification in progress
+- - ⚠️ Current weather notification in progress
 ---
 
 ## 🚀 Installation
