@@ -66,7 +66,8 @@ function getDelayUntilNextMultipleOf(minutes) {
   const now = new Date();
   const ms = now.getTime();
   const next = new Date(Math.ceil(ms / (minutes * 60 * 1000)) * minutes * 60 * 1000);
-  return (next - now) / 60000; 
+  const delay = (next - now) / 60000;
+  return delay < 0.01 ? 0.01 : delay;
 }
 
 
