@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Grow A Garden Extension",
     "version": "1.0",
-    "description": "Grow A Garden Extension",
+    "description": "A helpful Chrome extension for Grow a Garden players. Automatically notifies you when in-game rare items like seeds, gear, and eggs are restocked. No more checking manually—stay updated effortlessly!",
     "icons":{
         "128": "./images/icons/GaGextension128.png",
         "48":"./images/icons/GaGextension48.png",
