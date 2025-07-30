@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Grow A Garden Extension",
+    "name": "GaG Stock",
     "version": "1.0",
     "description": "A Chrome extension for Grow a Garden players. Notifies you when in-game rare items like seeds, gear, and eggs are restocked.",
     "icons":{
