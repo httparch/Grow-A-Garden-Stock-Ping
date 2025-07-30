@@ -12,9 +12,9 @@ A lightweight and helpful Chrome extension for **Grow a Garden** players. Stay u
   Receive real-time notifications when **rare or valuable items** appear in stock, including:
   
   ```
-  "Master Sprinkler", "Level Up Lollipop", "Medium Toy", "Medium Treat", 
-  "Elder Strawberry", "Burning Bud", "Sugar Apple", "Giant Pinecone", 
-  "Beanstalk", "Ember Lily", "Paradise Egg", "Mythical Egg", "Bug Egg"
+  "Master Sprinkler", "Level Up Lollipop", "Medium Toy", "Medium Treat","Godly Sprinkler","Tanning Mirror","Friendship Pot",
+                        "Elder Strawberry", "Burning Bud", "Sugar Apple", "Giant Pinecone", "Beanstalk", "Ember Lily","Grape", "Mushroom","Pepper","Cacao",
+                        "Paradise Egg", "Mythical Egg", "Bug Egg"
   ```
 
 - **🔍 Grow a Garden Info Search**  
