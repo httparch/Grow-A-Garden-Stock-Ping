@@ -13,8 +13,8 @@ A lightweight and helpful Chrome extension for **Grow a Garden** players. Stay u
   
   ```
   "Master Sprinkler", "Level Up Lollipop", "Medium Toy", "Medium Treat","Godly Sprinkler","Tanning Mirror","Friendship Pot",
-                        "Elder Strawberry", "Burning Bud", "Sugar Apple", "Giant Pinecone", "Beanstalk", "Ember Lily","Grape", "Mushroom","Pepper","Cacao",
-                        "Paradise Egg", "Mythical Egg", "Bug Egg"
+  "Elder Strawberry", "Burning Bud", "Sugar Apple", "Giant Pinecone", "Beanstalk", "Ember Lily","Grape", "Mushroom","Pepper","Cacao",
+  "Paradise Egg", "Mythical Egg", "Bug Egg"
   ```
 
 - **🔍 Grow a Garden Info Search**  
