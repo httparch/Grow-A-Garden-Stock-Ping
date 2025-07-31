@@ -82,9 +82,5 @@ function getDelayUntilNextMultipleOf(minutes, alignToNext = false, extraSeconds 
   const delayInMinutes = Math.max(delayMs / 60000, 0.01);
   const nextAlarm = new Date(msNow + delayMs);
 
-  console.log(`⏰ Now:         ${now.toLocaleTimeString()}`);
-  console.log(`🧮 Next Alarm: ${nextAlarm.toLocaleTimeString()} (+${minutes}min interval, +${extraSeconds}s extra)`);
-  console.log(`⏳ Delay:       ${delayInMinutes.toFixed(2)} minutes\n`);
-
   return delayInMinutes;
 }
