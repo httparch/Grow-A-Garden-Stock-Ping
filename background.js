@@ -35,13 +35,14 @@ async function notifyItemRestock(category) {
 
 
 chrome.runtime.onInstalled.addListener(() => {
+
   chrome.alarms.create("checkEggAlarm", {
-    delayInMinutes: getDelayUntilNextMultipleOf(30,true), 
+    delayInMinutes: getDelayUntilNextMultipleOf(30,true,30), 
     periodInMinutes: 30,
   });
 
   chrome.alarms.create("checkFastAlarm", {
-    delayInMinutes: getDelayUntilNextMultipleOf(5,true), 
+    delayInMinutes: getDelayUntilNextMultipleOf(5,true,30), 
     periodInMinutes: 5,
   });
 
@@ -66,17 +67,24 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 
 });
 
-
-
-function getDelayUntilNextMultipleOf(minutes, runImmediately = false) {
-
-  if (runImmediately) return 0.01;
+function getDelayUntilNextMultipleOf(minutes, alignToNext = false, extraSeconds = 30) {
+  if (!alignToNext) return 0.01;
 
   const now = new Date();
-  const ms = now.getTime();
-  const next = new Date(Math.ceil(ms / (minutes * 60 * 1000)) * minutes * 60 * 1000);
-  const delay = (next - now) / 60000;
-  return delay < 0.01 ? 0.01 : delay;
+  const msNow = now.getTime();
+
+  const intervalMs = minutes * 60 * 1000;
+  const extraDelayMs = extraSeconds * 1000;
+
+  const nextAlignedTimeMs = Math.ceil(msNow / intervalMs) * intervalMs + extraDelayMs;
+  const delayMs = nextAlignedTimeMs - msNow;
+
+  const delayInMinutes = Math.max(delayMs / 60000, 0.01);
+  const nextAlarm = new Date(msNow + delayMs);
+
+  console.log(`⏰ Now:         ${now.toLocaleTimeString()}`);
+  console.log(`🧮 Next Alarm: ${nextAlarm.toLocaleTimeString()} (+${minutes}min interval, +${extraSeconds}s extra)`);
+  console.log(`⏳ Delay:       ${delayInMinutes.toFixed(2)} minutes\n`);
+
+  return delayInMinutes;
 }
-
-
