@@ -10,7 +10,7 @@ const CATEGORY_MAP = {
   eggs: { items: 'eggs', folder: 'egg' },
 };
 
-const itemsToNotify = ["Master Sprinkler", "Level Up Lollipop", "Medium Toy", "Medium Treat","Godly Sprinkler","Tanning Mirror","Friendship Pot", "Magnifying Glass",
+const itemsToNotify = ["Master Sprinkler", "Level Up Lollipop", "Medium Toy", "Medium Treat","Godly Sprinkler","Tanning Mirror","Friendship Pot", "Magnifying Glass","Grandmaster_Sprinkler",
                         "Elder Strawberry", "Burning Bud", "Sugar Apple", "Giant Pinecone", "Beanstalk", "Ember Lily","Grape", "Mushroom","Pepper","Cacao",
                         "Paradise Egg", "Mythical Egg", "Bug Egg"];
 
